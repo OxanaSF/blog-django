@@ -1,48 +1,17 @@
-{% extends 'base.html' %} 
-{% load static %}
-
-{% block title %} 
-This Post Title 
-{% endblock %}
-
-{% block css_files %}
+{% extends 'base.html' %} {% load static %} {% block title %} {{ post.title }}
+{% endblock %} {% block css_files %}
 <link rel="stylesheet" href="{% static 'blog/post-detail.css' %}" />
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 <section id="summary">
-  <h2>Post Title</h2>
+  <h2>{{post.title }}</h2>
   <article>
-    <img src="{% static 'blog/images/mountains.png' %}" alt="Post Title" />
-    <address>By Oxana</address>
-    <div>Last updated on <time>July 10th</time></div>
+    <img src="{% static 'blog/images/'|add:post.image %}" alt="{{ post.title }}" />
+    <address>By {{ post.author }}</address>
+    <div>Last updated on <time>{{ post.date|date:"d M Y" }}</time></div>
   </article>
 </section>
 
 <main>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam at harum
-    explicabo laudantium nostrum! Nesciunt ab blanditiis incidunt,
-    necessitatibus magnam totam fugit nostrum? Velit cum dignissimos quae
-    voluptatum earum tempore illo esse porro nihil ipsum consequatur repellendus
-    ratione quas unde consequuntur ullam accusamus explicabo quaerat quibusdam,
-    facere perferendis soluta possimus.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam at harum
-    explicabo laudantium nostrum! Nesciunt ab blanditiis incidunt,
-    necessitatibus magnam totam fugit nostrum? Velit cum dignissimos quae
-    voluptatum earum tempore illo esse porro nihil ipsum consequatur repellendus
-    ratione quas unde consequuntur ullam accusamus explicabo quaerat quibusdam,
-    facere perferendis soluta possimus.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam at harum
-    explicabo laudantium nostrum! Nesciunt ab blanditiis incidunt,
-    necessitatibus magnam totam fugit nostrum? Velit cum dignissimos quae
-    voluptatum earum tempore illo esse porro nihil ipsum consequatur repellendus
-    ratione quas unde consequuntur ullam accusamus explicabo quaerat quibusdam,
-    facere perferendis soluta possimus.
-  </p>
+  {{ post.content|linebreaks }}
 </main>
 {% endblock %}
