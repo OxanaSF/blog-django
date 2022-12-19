@@ -34,15 +34,15 @@
 }
 
 #latest-posts {
-  /* background-color: #ff2e63; */
   background-color: white;
   padding: 2rem;
   border-radius: 12px;
-  width: 30rem;
+  /* width: 30rem; */
   margin: -6rem auto 2rem auto;
   box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
   color: #425463;
   letter-spacing: 1px;
+  width: 90%;
 }
 
 .post__content {
