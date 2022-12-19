@@ -34,10 +34,11 @@
 }
 
 #latest-posts {
-  background-color: #ff2e63;
+  /* background-color: #ff2e63; */
+  background-color: white;
   padding: 2rem;
   border-radius: 12px;
-  width: 60rem;
+  width: 30rem;
   margin: -6rem auto 2rem auto;
   box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
   color: #425463;
@@ -46,7 +47,6 @@
 
 .post__content {
   color: #425463;
-  color: white;
   letter-spacing: 1px;
 }
 
@@ -75,9 +75,9 @@
 #about {
   text-align: center;
   padding: 3rem;
-  background-color: #003153;
+  background-color: #e4e4e4;
   margin-top: 5rem;
-  color: white;
+  color: #425463;
 }
 
 #about h2 {
@@ -85,8 +85,10 @@
 }
 
 #about p {
-  font-size: 1.5rem;
-  color: #353535;
-  color: white;
+  font-size: 1.3rem;
+  color: #425463;
   letter-spacing: 1px;
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.7;
 }
