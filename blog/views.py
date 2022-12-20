@@ -3,7 +3,7 @@ from datetime import date
 
 all_posts = [
     {
-        "slug": "hike-in-the-mountains",
+        "slug": "g",
         "image": "mountains.png",
         "author": "Oxana",
         "date": date(2022, 7, 21),
